@@ -43,7 +43,7 @@ async def about_hobby(message: types.Message):
                          "разработка полезных приложений на его основе, чтение художественной литратуры"
                          ", кинематограф и многое другое.")
 
-@dp.message_handler(lambda message: message.text == "Прислать войс")
+@dp.message_handler(lambda message: message.text == "Прислать голосовое")
 async def send_voice(message: types.Message):
     await bot.send_voice(message.chat.id, caption='Объяснение для бабушки, что такое GPT', voice=open('Объяснение-GPT.ogg', 'rb'))
     await bot.send_voice(message.chat.id, caption='Разница между SQL и NoSQL', voice=open('SQL_NoSQL.ogg', 'rb'))
